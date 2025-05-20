@@ -5,7 +5,8 @@ Official repository for the paper *LivePoem: Improving the Learning Experience o
 We have compiled the generated samples within a PPTX file for better illustration purposes. The files can be accessed via this link: https://drive.google.com/drive/folders/1OXtzhETvpkRJRiynQfZchZizyrqQVGox?usp=share_link  
 
 ## Code
-In addition, we also release code for the poetry-to-melody generation phase under this repository. The project includes the following steps:
+In addition, we also release code for the poetry-to-melody generation phase under this repository. The project includes the following steps. For each step, we provide a jupyter notebook file to facilitate step-by-step code execution. 
+
 ### Build Dictionary
 
 ### Binarise Data
