@@ -8,7 +8,7 @@ We have compiled the generated samples within a PPTX file for better illustratio
 In addition, we also release code for the poetry-to-melody generation phase under this repository. The project includes the following steps. For each step, we provide a jupyter notebook file to facilitate step-by-step code execution. 
 
 ### Build Dictionary for Lyrics & Melodies
-Please run the jupyter notebook file "./0_build_dictionary/0_build_dict_octuple.ipynb" will generate the used dictionary as music_dict.pkl under binary folder. 
+The notebook file `./0_build_dictionary/0_build_dict_octuple.ipynb` provides a step-by-step guide to generate the dictionaries for melodies and lyrics, respectively. Running the notebook will create a `music_dict.pkl` file covering the complete vocabulary required for this task.
 
 ### Binarise Data
 Run ./1_binarise_data/1_octuplemidi.ipynb to binarise the lyrics and melody dataset
