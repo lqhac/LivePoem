@@ -17,5 +17,8 @@ Run `./1_binarise_data/1_octuplemidi.ipynb` to binarise the lyrics and melody da
 The notebook file `3_train_bart.ipynb` is a step-by-step guide to training the model. Alternatively, running `python 3_train_bart.py` can start the training process in one go.
 
 ### Inference
-For batch inference, please use `4_infer_bart.ipynb`
-For custom single-sample inference, please use `4_infer_bart_single.ipynb`
+For batch inference of multiple samples, please run `4_infer_bart.ipynb`.
+For customised single-sample inference, please run `4_infer_bart_single.ipynb`.
+
+### To cite
+COMING SOON...
