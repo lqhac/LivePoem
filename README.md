@@ -11,13 +11,11 @@ In addition, we also release code for the poetry-to-melody generation phase unde
 The notebook file `./0_build_dictionary/0_build_dict_octuple.ipynb` provides a step-by-step guide to generate the dictionaries for melodies and lyrics, respectively. Running the notebook will create a `music_dict.pkl` file covering the complete vocabulary required for this task.
 
 ### Binarise Data
-Run ./1_binarise_data/1_octuplemidi.ipynb to binarise the lyrics and melody dataset
+Run `./1_binarise_data/1_octuplemidi.ipynb` to binarise the lyrics and melody dataset.
 
 ### Train Model
-```python
-python ./2_train_model/3_train_bart_octuple.py
-```
+The notebook file `3_train_bart.ipynb` is a step-by-step guide to training the model. Alternatively, running `python 3_train_bart.py` can start the training process in one go.
 
 ### Inference
-For batch inference, please use "4_infer_bart_octuple.ipynb"
-For custom single-sample inference, please use "4_infer_bart_octuple_single.ipynb"
+For batch inference, please use `4_infer_bart.ipynb`
+For custom single-sample inference, please use `4_infer_bart_single.ipynb`
