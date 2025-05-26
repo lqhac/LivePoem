@@ -1,8 +1,11 @@
 # LivePoem
 The official repository for the paper *LivePoem: Improving the Learning Experience of Classical Chinese Poetry with AI-Generated Musical Storyboards*, which has been accepted to the **[the 34th International Joint Conference on Artificial Intelligence (IJCAI 2025), Special Track on Human-Centred Artificial Intelligence: Multidisciplinary Contours and Challenges of Next-Generation AI Research and Applications](https://2025.ijcai.org/call-for-papers-human-centred-artificial-intelligence/), 16-22 August, Montreal, Canada.**.  
 
+## Original Manuscript
+The original manuscript is under this directory named `LivePoem (IJCAI25 HAI Track).pdf`. The final paper will be compiled in the proceedings of IJCAI2025 after the conference. We will update this repository by then accordingly.
+
 ## Demonstrations of Musical Storyboard
-We have compiled the generated samples within a PPTX file for better illustration purposes. The files can be accessed via this link: https://drive.google.com/drive/folders/1OXtzhETvpkRJRiynQfZchZizyrqQVGox?usp=share_link  
+We compile the generated samples within a PPTX file for better illustration purposes. The files can be accessed via this link: https://drive.google.com/drive/folders/1OXtzhETvpkRJRiynQfZchZizyrqQVGox?usp=share_link  
 
 ## Code
 In addition to the storyboard generator based on Free-Bloom [(Huang et al., 2022)](https://proceedings.neurips.cc/paper_files/paper/2023/hash/52f050499cf82fa8efb588e263f6f3a7-Abstract-Conference.html), we also release code for the poetry-to-melody generation phase under this repository. The project includes the following steps. For each step, we provide a jupyter notebook file to facilitate step-by-step code execution. 
