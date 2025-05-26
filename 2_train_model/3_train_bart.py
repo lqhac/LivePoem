@@ -35,23 +35,19 @@ binary_dir = '/home/qihao/CS6207/binary'
 words_dir = '/home/qihao/CS6207/binary/words'
 hparams = {
     'batch_size': 4,
-    'word_data_dir': '/home/qihao/CS6207/binary/words',
+    'word_data_dir': './binary/words',
     'sentence_maxlen': 512,
     'hidden_size': 768,
     'n_layers': 6,
     'n_head': 8,
-    # 'pretrain': '/home/qihao/CS6207/checkpoints/checkpoint_20240331:181343_lr_5e-05/best.pt',
-    # 'pretrain': '/home/qihao/CS6207/checkpoints/checkpoint_20240331:191608_lr_5e-05/best.pt',
-    # 'pretrain': '/home/qihao/CS6207/checkpoints/checkpoint_20240403:194534_lr_5e-05/best.pt',
-    'pretrain': '/home/qihao/CS6207/checkpoints/checkpoint_20240405:195400_lr_5e-05/best.pt',
-    # 'pretrain': '',
+    'pretrain': '',
     'optimizer_adam_beta1': 0.9,
     'optimizer_adam_beta2': 0.98,
     'weight_decay': 0.1,
     'patience': 10,
     'warmup': 3000,
     'lr': 5.0e-5,
-    'checkpoint_dir': '/home/qihao/CS6207/checkpoints',
+    'checkpoint_dir': './checkpoints',
     'drop_prob': 0.2,
     'total_epoch': 1000,
     'num_epochs': 30,
@@ -67,7 +63,6 @@ def set_seed(seed=1234):  # seed setting
     torch.manual_seed(seed)
     torch.cuda.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
-    # cuDNN在使用deterministic模式时（下面两行），可能会造成性能下降（取决于model）
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
 
@@ -85,8 +80,8 @@ def xe_loss(outputs, targets):
 
 def train(train_loader, model, optimizer, scheduler, epoch, total_epoch):
     # define the format of tqdm
-    with tqdm(total=len(train_loader), ncols=150, position=0, leave=True) as _tqdm:  # 总长度是data的长度
-        _tqdm.set_description('training epoch: {}/{}'.format(epoch + 1, total_epoch))  # 设置前缀更新信息
+    with tqdm(total=len(train_loader), ncols=150, position=0, leave=True) as _tqdm:  
+        _tqdm.set_description('training epoch: {}/{}'.format(epoch + 1, total_epoch))  
 
         # Model Train
         model.train()
@@ -94,7 +89,6 @@ def train(train_loader, model, optimizer, scheduler, epoch, total_epoch):
         train_loss = []
 
         for idx, data in enumerate(train_loader):
-            # prompt_index = list(data[f'tgt_word'].numpy()).index(50268)
             enc_inputs = {k: data[f'src_{k}'].to(device) for k in src_keys}
             dec_inputs = {k: data[f'tgt_{k}'].to(device) for k in tgt_keys}
             
@@ -130,8 +124,8 @@ def train(train_loader, model, optimizer, scheduler, epoch, total_epoch):
 
 def valid(valid_loader, model, epoch, total_epoch):
     # define the format of tqdm
-    with tqdm(total=len(valid_loader), ncols=150) as _tqdm:  # 总长度是data的长度
-        _tqdm.set_description('validation epoch: {}/{}'.format(epoch + 1, total_epoch))  # 设置前缀更新信息
+    with tqdm(total=len(valid_loader), ncols=150) as _tqdm:  
+        _tqdm.set_description('validation epoch: {}/{}'.format(epoch + 1, total_epoch))  
 
         model.eval()  # switch to valid mode
         running_loss = 0.0
@@ -226,8 +220,6 @@ def train_l2m():
         current_model_dict = model.state_dict()
         loaded_state_dict = torch.load(pre_trained_path)
         new_state_dict={k:v if v.size()==current_model_dict[k].size() else current_model_dict[k] for k,v in zip(current_model_dict.keys(), loaded_state_dict.values())}
-        # model.load_state_dict(new_state_dict, strict=False)
-        # model.load_state_dict(torch.load(pre_trained_path), strict=False, tensor_check_fn=tensor_check_fn)
         model.load_state_dict(new_state_dict, strict=False)
         print(">>> Load pretrained model successfully")
         
@@ -243,18 +235,10 @@ def train_l2m():
         optimizer, num_warmup_steps=hparams['warmup'], num_training_steps=num_training_steps
     )
 
-    """
-    if torch.cuda.device_count() > 1:
-        print("Using", torch.cuda.device_count(), "GPUs!")
-        model = torch.nn.DataParallel(model)
-    model.to(device)
-    """
-
     # training conditions (for naming the ckpt)
     lr = hparams['lr']
 
     # early stop: initialize the early_stopping object
-    # checkpointpath = f"{hparams['checkpoint_dir']}/Cond_{cond}_GPT2_{cur_time}_lr{lr}"
     checkpointpath = f"{hparams['checkpoint_dir']}/checkpoint_{cur_time}_lr_{lr}"
     if not os.path.exists(checkpointpath):
         os.mkdir(checkpointpath)
