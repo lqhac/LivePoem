@@ -23,6 +23,13 @@ The notebook file `3_train_bart.ipynb` is a step-by-step guide to training the m
 For batch inference of multiple samples, please refer to `4_infer_bart.ipynb`.
 For customised single-sample inference, please refer to `4_infer_bart_single.ipynb`.
 
+## User study
+We also additionally provide the results from our user study and the codes to perform statistical analyses on these results. Details are included under the folder `./4_subjective_analysis`.  
+### Reading Comprehension Test Performance and Self-Assessment Manikin (SAM)
+The results of participants' reading comprehension test are stored in `./4_subjective_analysis/test_results.csv`. To perform statistical tests, please refer to `./4_subjective_analysis/statistical_tests.ipynb`.
+### Thematic Analysis and Inter-Rater Reliability
+We also performed a thematic analysis by coding participants' responses to open-end questions. The results are in `./4_subjective_analysis/response_coding.csv`. For the coded (sub)themes and inter-rater reliability, please refer to `./4_subjective_analysis/thematic_analysis.ipynb`.
+
 ## To cite this work
 ```
 Coming after the publication of IJCAI25 proceedings
