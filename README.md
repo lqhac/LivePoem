@@ -1,17 +1,11 @@
 # LivePoem
 The official repository for the paper *LivePoem: Improving the Learning Experience of Classical Chinese Poetry with AI-Generated Musical Storyboards*, which has been accepted to the **[the 34th International Joint Conference on Artificial Intelligence (IJCAI 2025), Special Track on Human-Centred Artificial Intelligence: Multidisciplinary Contours and Challenges of Next-Generation AI Research and Applications](https://2025.ijcai.org/call-for-papers-human-centred-artificial-intelligence/), 16-22 August, Montreal, Canada.**.  
 
-## Original Manuscript
-The original manuscript is under this directory named `LivePoem (IJCAI25 HAI Track).pdf`. The final paper will be compiled in the proceedings of IJCAI2025 after the conference. We will update this repository by then accordingly.
-
-## Demonstrations of Musical Storyboard
-We compile the generated samples within a PPTX file for better illustration purposes. The files can be accessed via this link: https://drive.google.com/drive/folders/1OXtzhETvpkRJRiynQfZchZizyrqQVGox?usp=share_link  
-
 ## Code
 In addition to the storyboard generator based on Free-Bloom [(Huang et al., 2022)](https://proceedings.neurips.cc/paper_files/paper/2023/hash/52f050499cf82fa8efb588e263f6f3a7-Abstract-Conference.html), we also release code for the poetry-to-melody generation phase under this repository. The project includes the following steps. For each step, we provide a jupyter notebook file to facilitate step-by-step code execution. 
 
 ### STEP 0: Environmental Setup
-We have exported the environmental configuration to `environment.yml`. Readers may reproduce the environment with `conda create --name <your_env_name> --file environment.yml`.
+The environmental configuration is saved to `environment.yml`. Readers may reproduce the environment by `conda create --name <your_env_name> --file environment.yml`.
 
 ### STEP 1: Build Dictionary for Lyrics & Melodies
 The notebook file `./0_build_dictionary/0_build_dict.ipynb` provides a step-by-step guide to generate the dictionaries for melodies and lyrics, respectively. Running the notebook will create a `music_dict.pkl` file covering the complete vocabulary required for this task.
@@ -40,3 +34,9 @@ Coming after the publication of IJCAI25 proceedings
 
 ## Citations
 Huang, H., Feng, Y., Shi, C., Xu, L., Yu, J., & Yang, S. (2023). Free-bloom: Zero-shot text-to-video generator with llm director and ldm animator. Advances in Neural Information Processing Systems, 36, 26135-26158.
+
+## Original Manuscript
+The original manuscript is under this directory named `LivePoem (IJCAI25 HAI Track).pdf`. The final paper will be compiled in the proceedings of IJCAI2025 after the conference. We will update this repository by then accordingly.
+
+## Demonstrations of Musical Storyboard
+We compile the generated samples within a PPTX file for better illustration purposes. The files can be accessed via this link: https://drive.google.com/drive/folders/1OXtzhETvpkRJRiynQfZchZizyrqQVGox?usp=share_link  
