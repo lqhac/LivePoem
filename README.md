@@ -10,6 +10,9 @@ We compile the generated samples within a PPTX file for better illustration purp
 ## Code
 In addition to the storyboard generator based on Free-Bloom [(Huang et al., 2022)](https://proceedings.neurips.cc/paper_files/paper/2023/hash/52f050499cf82fa8efb588e263f6f3a7-Abstract-Conference.html), we also release code for the poetry-to-melody generation phase under this repository. The project includes the following steps. For each step, we provide a jupyter notebook file to facilitate step-by-step code execution. 
 
+### STEP 0: Environmental Setup
+We have exported the environmental configuration to `environment.yml`. Readers may reproduce the environment with `conda create --name <your_env_name> --file environment.yml`.
+
 ### STEP 1: Build Dictionary for Lyrics & Melodies
 The notebook file `./0_build_dictionary/0_build_dict.ipynb` provides a step-by-step guide to generate the dictionaries for melodies and lyrics, respectively. Running the notebook will create a `music_dict.pkl` file covering the complete vocabulary required for this task.
 
