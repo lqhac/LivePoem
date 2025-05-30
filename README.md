@@ -10,16 +10,16 @@ We compile the generated samples within a PPTX file for better illustration purp
 ## Code
 In addition to the storyboard generator based on Free-Bloom [(Huang et al., 2022)](https://proceedings.neurips.cc/paper_files/paper/2023/hash/52f050499cf82fa8efb588e263f6f3a7-Abstract-Conference.html), we also release code for the poetry-to-melody generation phase under this repository. The project includes the following steps. For each step, we provide a jupyter notebook file to facilitate step-by-step code execution. 
 
-### STEP1: Build Dictionary for Lyrics & Melodies
+### STEP 1: Build Dictionary for Lyrics & Melodies
 The notebook file `./0_build_dictionary/0_build_dict.ipynb` provides a step-by-step guide to generate the dictionaries for melodies and lyrics, respectively. Running the notebook will create a `music_dict.pkl` file covering the complete vocabulary required for this task.
 
 ### STEP 2: Binarise Data Set
 Run `./1_binarise_data/1_data_binarisation.ipynb` to binarise the lyrics and melody dataset. The lyrics and melodies should be in .txt and .mid, respectively. We provide some example data under the `./data` directory.
 
-### Train Model
+### STEP 3: Train Model
 The notebook file `3_train_bart.ipynb` is a step-by-step guide to training the model. Alternatively, running `python 3_train_bart.py` can start the training process in one run.
 
-### Inference
+### STEP 4: Inference
 For batch inference of multiple samples, please refer to `4_infer_bart.ipynb`.
 For customised single-sample inference, please refer to `4_infer_bart_single.ipynb`.
 
