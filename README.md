@@ -28,15 +28,13 @@ The results of participants' reading comprehension test are stored in `./4_subje
 We also performed a thematic analysis by coding participants' responses to open-end questions. The results are in `./4_subjective_analysis/response_coding.csv`. For the coded (sub)themes and inter-rater reliability, please refer to `./4_subjective_analysis/thematic_analysis.ipynb`.
 
 ## To cite this work
+The original manuscript is under this directory named `LivePoem (IJCAI25 HAI Track).pdf`. The final paper will be compiled in the proceedings of IJCAI2025 post the conference taking place. We will update this repository by then accordingly.
 ```
-Coming after the publication of IJCAI25 proceedings
+The official citation will be available post the publication of IJCAI25 proceedings.
 ```
 
 ## Citations
 Huang, H., Feng, Y., Shi, C., Xu, L., Yu, J., & Yang, S. (2023). Free-bloom: Zero-shot text-to-video generator with llm director and ldm animator. Advances in Neural Information Processing Systems, 36, 26135-26158.
-
-## Original Manuscript
-The original manuscript is under this directory named `LivePoem (IJCAI25 HAI Track).pdf`. The final paper will be compiled in the proceedings of IJCAI2025 after the conference. We will update this repository by then accordingly.
 
 ## Demonstrations of Musical Storyboard
 We compile the generated samples within a PPTX file for better illustration purposes. The files can be accessed via this link: https://drive.google.com/drive/folders/1OXtzhETvpkRJRiynQfZchZizyrqQVGox?usp=share_link  
