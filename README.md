@@ -33,7 +33,7 @@ The original manuscript is under this directory named `LivePoem (IJCAI25 HAI Tra
 The official citation will be available post the publication of IJCAI25 proceedings.
 ```
 
-## Citations
+## References
 Huang, H., Feng, Y., Shi, C., Xu, L., Yu, J., & Yang, S. (2023). Free-bloom: Zero-shot text-to-video generator with llm director and ldm animator. Advances in Neural Information Processing Systems, 36, 26135-26158.
 
 ## Demonstrations of Musical Storyboard
