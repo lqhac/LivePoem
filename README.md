@@ -30,7 +30,21 @@ We also performed a thematic analysis by coding participants' responses to open-
 ## To cite this work
 The original manuscript is under this directory named `LivePoem (IJCAI25 HAI Track).pdf`. The final paper will be compiled in the proceedings of IJCAI2025 post the conference taking place. We will update this repository by then accordingly.
 ```
-The official citation will be available post the publication of IJCAI25 proceedings.
+@inproceedings{ijcai2025p1145,
+  title     = {LivePoem: Improving the Learning Experience of Classical Chinese Poetry with AI-Generated Musical Storyboards},
+  author    = {Liang, Qihao and Ma, Xichu and Hopkins, Torin and Wang, Ye},
+  booktitle = {Proceedings of the Thirty-Fourth International Joint Conference on
+               Artificial Intelligence, {IJCAI-25}},
+  publisher = {International Joint Conferences on Artificial Intelligence Organization},
+  editor    = {James Kwok},
+  pages     = {10307--10315},
+  year      = {2025},
+  month     = {8},
+  note      = {Human-Centred AI},
+  doi       = {10.24963/ijcai.2025/1145},
+  url       = {https://doi.org/10.24963/ijcai.2025/1145},
+}
+
 ```
 
 ## References
